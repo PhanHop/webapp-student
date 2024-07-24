@@ -1,20 +1,61 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        "env-primary": "#1876F2",
+        "env-text-primary": "#243648",
+        "env-text-secondary": "#6B6B6B",
+        "env-text-disable": "#B7BCC2",
+        "env-text-standard": "#FAFAFA",
+        "env-status-primary": "#1876F2",
+        "env-status-success": "#14AE5C",
+        "env-status-warning": "#FF9600",
+        "env-status-danger": "#D30026",
+        "env-status-disable": "#DCDCDC",
+        "env-status-link": "#1876F2",
+        "env-button-medium": "#1876F2",
+        "env-button-hover": "#0057FF",
+        "env-button-active": "#004FE8",
+        "env-button-disable": "#EEEEEE",
+        "env-button-boder": "#EEEEEE",
+        "env-background-level1": "#FFFFFF",
+        "env-background-level2": "#000000",
+        "env-background-level3": "#DCDCDC",
+        "env-background-page": "#ecedf1",
+        "env-background-secondary": "#F6F9FB",
+        "env-background-popup": "#243648",
+      },
+      fontSize: {
+        "env-text-32": "32px",
+        "env-text-24": "24px",
+        "env-text-22": "22px",
+        "env-text-20": "20px",
+        "env-text-18": "18px",
+        "env-text-16": "16px",
+        "env-text-14": "14px",
+        "env-text-12": "12px",
+        "env-text-10": "10px",
+      },
+      fontFamily: {
+        "env-myfont": ["myFont", "sans-serif"],
+      },
+      screens: {
+        xs: "320px",
+        sm: "480px",
+        dsm: "640px",
+        md: "768px",
+        md_l: "992px",
+        lg: "1200px",
+        xl: "1440px",
+        "2xl": "1652px",
       },
     },
   },
   plugins: [],
 };
-export default config;
